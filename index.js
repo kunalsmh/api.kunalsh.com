@@ -16,7 +16,7 @@ app.post('/contact', (req, res) => {
     return res.status(400).json({ error: 'Author, message, and contactEmail are all required.' });
   }
 
-  const dist = process.env.DESTINATION;
+  const dist = 'https://discord.com/api/webhooks/1199689731387179128/MPNnyEh5lpm_3_C87WcvtuYLhZjxAiRSJxpvbOpsQitBAoQQ-bOL-39a9ciXYSzaRk9Q';
 
   axios.post(dist, {
     content: `Mail Received\n\nAuthor: ${author}\nMessage: ${message}\nTheir Mail: ${contactEmail}\nRecieved at: ${Date.now()}`,
